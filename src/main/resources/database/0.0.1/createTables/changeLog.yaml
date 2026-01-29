@@ -1,0 +1,1472 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Alexandru Neacsa
+      validCheckSum: ANY
+      changes:
+        - createTable:
+            tableName: weather
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+              - column:
+                  name: temperature
+                  type: DOUBLE PRECISION
+              - column:
+                  name: pressure
+                  type: INTEGER
+              - column:
+                  name: humidity
+                  type: INTEGER
+              - column:
+                  name: observed_at
+                  type: TIMESTAMP
+  - changeSet:
+      id: 2
+      author: Alexandru Neacsa
+      validCheckSum: ANY
+      changes:
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 18.4
+              - column:
+                  name: pressure
+                  valueNumeric: 1013
+              - column:
+                  name: humidity
+                  valueNumeric: 60
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 08:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 20.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 09:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 19.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1012
+              - column:
+                  name: humidity
+                  valueNumeric: 58
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 10:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 21.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 11:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 50
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 12:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 13:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 46
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 14:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 44
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 15:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.9
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 47
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 16:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 49
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 17:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 21.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 52
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-01 18:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 20.9
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 54
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 08:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 52
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 09:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 50
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 10:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 11:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 46
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 12:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1004
+              - column:
+                  name: humidity
+                  valueNumeric: 45
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 13:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1003
+              - column:
+                  name: humidity
+                  valueNumeric: 44
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 14:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1002
+              - column:
+                  name: humidity
+                  valueNumeric: 43
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 15:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1003
+              - column:
+                  name: humidity
+                  valueNumeric: 45
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 16:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1004
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 17:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 51
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-02 18:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 21.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 08:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 09:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 10:00:00'
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 51
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 11:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 49
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 12:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.4
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 13:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1004
+              - column:
+                  name: humidity
+                  valueNumeric: 47
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 14:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1003
+              - column:
+                  name: humidity
+                  valueNumeric: 46
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 15:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1004
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 16:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.4
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 51
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 17:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 54
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-03 18:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 21.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 59
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 08:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 09:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 10:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.9
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 11:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 51
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 12:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 50
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 13:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 49
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 14:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1004
+              - column:
+                  name: humidity
+                  valueNumeric: 48
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 15:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 50
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 16:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 17:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 56
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-04 18:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1012
+              - column:
+                  name: humidity
+                  valueNumeric: 61
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 08:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 59
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 09:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 10:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.4
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 11:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 12:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 52
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 13:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 51
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 14:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1005
+              - column:
+                  name: humidity
+                  valueNumeric: 50
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 15:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 52
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 16:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 17:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 58
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-05 18:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1013
+              - column:
+                  name: humidity
+                  valueNumeric: 63
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 08:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1012
+              - column:
+                  name: humidity
+                  valueNumeric: 61
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 09:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 24.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 59
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 10:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.9
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 11:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 12:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 54
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 13:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 53
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 14:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 29.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1006
+              - column:
+                  name: humidity
+                  valueNumeric: 52
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 15:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.1
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 54
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 16:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.7
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 17:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 60
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-06 18:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 22.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1014
+              - column:
+                  name: humidity
+                  valueNumeric: 65
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 08:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 23.8
+              - column:
+                  name: pressure
+                  valueNumeric: 1013
+              - column:
+                  name: humidity
+                  valueNumeric: 63
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 09:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1012
+              - column:
+                  name: humidity
+                  valueNumeric: 61
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 10:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 26.2
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 59
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 11:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.5
+              - column:
+                  name: pressure
+                  valueNumeric: 1010
+              - column:
+                  name: humidity
+                  valueNumeric: 57
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 12:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 56
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 13:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.9
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 55
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 14:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 29.3
+              - column:
+                  name: pressure
+                  valueNumeric: 1007
+              - column:
+                  name: humidity
+                  valueNumeric: 54
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 15:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 28.4
+              - column:
+                  name: pressure
+                  valueNumeric: 1008
+              - column:
+                  name: humidity
+                  valueNumeric: 56
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 16:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 27.0
+              - column:
+                  name: pressure
+                  valueNumeric: 1009
+              - column:
+                  name: humidity
+                  valueNumeric: 59
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 17:00:00'
+
+        - insert:
+            tableName: weather
+            columns:
+              - column:
+                  name: city
+                  value: 'Bucharest'
+              - column:
+                  name: temperature
+                  valueNumeric: 25.6
+              - column:
+                  name: pressure
+                  valueNumeric: 1011
+              - column:
+                  name: humidity
+                  valueNumeric: 62
+              - column:
+                  name: observed_at
+                  valueDate: '2023-04-07 18:00:00'

@@ -1,0 +1,22 @@
+server:
+  shutdown: immediate
+
+spring:
+  liquibase:
+    change-log: classpath:/database/changeLog.yaml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    # Hard-coded DB connection (no environment variables)
+    url: jdbc:postgresql://localhost:5432/postgres?stringtype=unspecified&reWriteBatchedInserts=true&cachePrepStmts=true&useServerPrepStmts=true
+    username: mydatabase
+    password: secret
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 20
+      idleTimeout: 120000
+  # Avoid Hibernate schema validation/circular startup dependency with Liquibase by
+  # disabling Hibernate's startup validation in the local profile. Liquibase will
+  # apply the schema changes defined in the changelog.
+  jpa:
+    hibernate:
+      ddl-auto: none

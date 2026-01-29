@@ -1,0 +1,6 @@
+server:
+  shutdown: immediate
+
+spring:
+  liquibase:
+    change-log: classpath:/database/changeLog.yaml
