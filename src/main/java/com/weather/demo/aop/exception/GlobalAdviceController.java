@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import lombok.extern.slf4j.Slf4j;
 
+import org.springframework.web.server.ResponseStatusException;
+
 @Slf4j
 @RestControllerAdvice
 public class GlobalAdviceController {
@@ -32,5 +34,13 @@ public class GlobalAdviceController {
 		
 		String detail = ex.getMessage() != null ? ex.getMessage() : HttpStatus.NOT_FOUND.getReasonPhrase();
 		return ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, detail);
+	}
+	
+	@ExceptionHandler({ResponseStatusException.class})
+	public ProblemDetail handleResponseStatusException(final ResponseStatusException ex) {
+		
+		log.warn("Response status exception: {}", ex.getReason());
+		String detail = ex.getReason() != null ? ex.getReason() : ex.getStatusCode().toString();
+		return ProblemDetail.forStatusAndDetail(HttpStatus.valueOf(ex.getStatusCode().value()), detail);
 	}
 }

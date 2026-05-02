@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.weather.demo.model.WeatherStatisticsDto;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -65,5 +69,33 @@ public class WeatherService {
 		}
 		
 		repository.deleteById(id);
+	}
+	
+	public Page<WeatherDto> getAllPaginated(Pageable pageable) {
+		log.info("Fetching paginated weather records: page={}, size={}", pageable.getPageNumber(), pageable.getPageSize());
+		return repository.findAll(pageable)
+			.map(weatherMapper::toDto);
+	}
+	
+	public List<WeatherDto> searchByCity(String city) {
+		log.info("Searching weather records for city: {}", city);
+		return repository.findByCity(city)
+			.stream()
+			.map(weatherMapper::toDto)
+			.collect(Collectors.toList());
+	}
+	
+	public List<WeatherDto> getByTemperatureRange(Double minTemp, Double maxTemp) {
+		log.info("Fetching weather records with temperature between {} and {}", minTemp, maxTemp);
+		return repository.findByTemperatureBetween(minTemp, maxTemp)
+			.stream()
+			.map(weatherMapper::toDto)
+			.collect(Collectors.toList());
+	}
+	
+	public WeatherStatisticsDto getStatistics(String city) {
+		log.info("Fetching statistics for city: {}", city);
+		return repository.getStatisticsByCity(city)
+			.orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "No data found for city: " + city));
 	}
 }
