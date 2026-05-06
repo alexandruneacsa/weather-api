@@ -31,6 +31,38 @@ databaseChangeLog:
   - changeSet:
       id: 2
       author: Alexandru Neacsa
+      changes:
+        - createTable:
+            tableName: cities
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+              - column:
+                  name: country
+                  type: VARCHAR(255)
+              - column:
+                  name: latitude
+                  type: DOUBLE PRECISION
+              - column:
+                  name: longitude
+                  type: DOUBLE PRECISION
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+  
+  - changeSet:
+      id: 3
+      author: Alexandru Neacsa
       validCheckSum: ANY
       changes:
         - insert:
@@ -1470,3 +1502,114 @@ databaseChangeLog:
               - column:
                   name: observed_at
                   valueDate: '2023-04-07 18:00:00'
+
+  - changeSet:
+      id: 4
+      author: Alexandru Neacsa
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Bucharest'
+              - column:
+                  name: country
+                  value: 'Romania'
+              - column:
+                  name: latitude
+                  valueNumeric: 44.4268
+              - column:
+                  name: longitude
+                  valueNumeric: 26.1025
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Cluj-Napoca'
+              - column:
+                  name: country
+                  value: 'Romania'
+              - column:
+                  name: latitude
+                  valueNumeric: 46.7712
+              - column:
+                  name: longitude
+                  valueNumeric: 23.6236
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Timisoara'
+              - column:
+                  name: country
+                  value: 'Romania'
+              - column:
+                  name: latitude
+                  valueNumeric: 45.7489
+              - column:
+                  name: longitude
+                  valueNumeric: 21.2087
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Brasov'
+              - column:
+                  name: country
+                  value: 'Romania'
+              - column:
+                  name: latitude
+                  valueNumeric: 45.6428
+              - column:
+                  name: longitude
+                  valueNumeric: 24.5678
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Constanta'
+              - column:
+                  name: country
+                  value: 'Romania'
+              - column:
+                  name: latitude
+                  valueNumeric: 44.1598
+              - column:
+                  name: longitude
+                  valueNumeric: 28.6648
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Budapest'
+              - column:
+                  name: country
+                  value: 'Hungary'
+              - column:
+                  name: latitude
+                  valueNumeric: 47.4979
+              - column:
+                  name: longitude
+                  valueNumeric: 19.0402
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: 'Sofia'
+              - column:
+                  name: country
+                  value: 'Bulgaria'
+              - column:
+                  name: latitude
+                  valueNumeric: 42.6977
+              - column:
+                  name: longitude
+                  valueNumeric: 23.3219
+
